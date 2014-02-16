@@ -19,3 +19,6 @@
 [submodule ".\\chars\\Magus"]
 	path = .\\chars\\Magus
 	url = https://github.com/jbahamon/ctm-magus.git
+[submodule ".\\stages"]
+	path = .\\stages
+	url = https://github.com/jbahamon/ctm-stages.git
