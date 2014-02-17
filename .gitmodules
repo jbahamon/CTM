@@ -22,3 +22,6 @@
 [submodule ".\\stages"]
 	path = .\\stages
 	url = https://github.com/jbahamon/ctm-stages.git
+[submodule "chars/InnerLavos"]
+	path = chars/InnerLavos
+	url = https://github.com/jbahamon/ctm-inner-lavos.git
