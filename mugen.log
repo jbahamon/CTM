@@ -1,0 +1,115 @@
+------------------------------------------
+M.U.G.E.N ver 1.00 (2011.01.18) status log
+------------------------------------------
+Parsing command line...
+Command line: C:\Users\jbahamon\Documents\GitHub\CTM\mugen.exe ff3_0 ff3_0 -s
+Parse command line OK
+Initializing...
+Allocating game variables
+Reading configuration file...OK
+Initializing timer...performance timer enabled...frequency 2435872...OK
+Initializing keyboard...configuring...OK
+Initializing input engine...OK
+Initializing sound...Using SDL audio driver: dsound
+Requesting mixer parameters (44100, 16, 2, 2048)...
+Opened mixer with parameters (44100, 16, 2, 2048)...
+OK
+Initializing BGM...BGMThreadInit returned 0
+OK
+Initializing graphics...gameCoord 1280x720...render mode 0_0...trying 1280x720x16 mode 0x0...success...OK
+Setting callbacks...OK
+Initializing font...OK
+Initializing game variables...OK
+Loading system fonts...OK
+Loading options...
+Initializing pads...failed
+Reinitializing input engine...OK
+Remapping keys...OK
+Reinitializing input engine...OK
+Options loaded OK
+Loading system...
+  Load system file system.def...OK
+  Load system spr...OK
+  Load system snd...OK
+  Load system fonts...OK
+  Load system anim...OK
+  Load [Title Info]...OK
+  Load [Option Info]...OK
+  Load [Select Info]...OK
+  Load [VS Screen]...OK
+  Load [Victory Screen]...OK
+  Load [Demo Mode]...OK
+  Load [Continue Screen]...OK
+  Load [Game Over Screen]...OK
+  Load [Win Screen]...OK
+  Load [Survival Results Screen]...OK
+  Load [Default Ending]...OK
+  Load [End Credits]...OK
+  Load TitleBG...VersusBG...VictoryBG...SelectBG...OptionBG...OK
+  Loading fight data
+    Opening fight data file data/mugen1/fight.def...OK
+    Reading [Files]...OK
+    Loading fonts...OK
+    Load fight anim...OK
+    Reading [Lifebar]...[Turns Lifebar]...[Simul Lifebar]...[Powerbar]...
+    [Face]...[Simul Face]...[Turns Face]...
+    [Name]...[Simul Name]...[Turns Name]...
+    [Time]...[Combo]...[Round]...[WinIcon]...OK
+    Allocating explods...OK
+  Fight data loaded OK
+System loaded OK
+Initialize OK
+Set up graphics...timer...OK
+Initializing character info...OK
+Playing quick VS.
+
+Entering main loop
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Loading character chars/ff3_0/ff3_0.def...
+  Loading info...OK
+  Loading cmd command set Crono.cmd...OK
+  Loading cns Crono.cns...OK
+  Loading cns States/System.st...OK
+  Loading cns States/Normal.st...OK
+  Loading cns States/Specials.st...OK
+  Loading cns States/Supers.st...OK
+  Loading cns States/Helpers.st...OK
+  Loading cmd state entry Crono.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff Crono.sff...OK
+  Loading anim Crono.air...OK
+  Loading snd Crono.snd...OK
+  Loading pals...OK
+  4159 expressions (1206 on trigger lines)
+Character ff3_0.def loaded OK
+Start of game loop
+End of game loop
+Total time: 6.69s
+Total frames: 400 	Skipped frames: 67
+Avg game rate: 59.79
+Avg frame rate: 49.78
+
+Returned from main loop
+Deinitializing...
+Frames      : 400
+Time elapsed: 7.060 sec
+ticks: 706, tps: 100, start 52, end 758
+
+Clearing player cache...OK
+Freeing character info...OK
+Freeing fight data...OK
+Freeing system data...OK
+Freeing game variables...OK
+Deinitializing input...pad...keyboard...OK
+Removing callbacks...OK
+Deintializing timer...OK
+Deinitializing graphics...OK
+Deinitializing BGM...OK
+Deinitializing sound...OK
+Successful program termination.
+
+Log file successfully closed.
