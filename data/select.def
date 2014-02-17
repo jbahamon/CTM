@@ -70,13 +70,13 @@
  ;
  ;Insert your characters below.
 
-Crono, stages/GuardiaPrison.def
-Lucca, stages/GuardiaPrison.def
-Marle, stages/Courtroom.def
-Frog, stages/ZenanBridge.def
-Robo, stages/GenoDome.def
-Ayla, stages/TyranoLair.def
-Magus, stages/MagusRoom.def
+Crono, stages/GuardiaPrison.def, order = 3
+Lucca, stages/GuardiaPrison.def, order = 3
+Marle, stages/Courtroom.def, order = 3
+Frog, stages/ZenanBridge.def, order = 3
+Robo, stages/GenoDome.def, order = 3
+Ayla, stages/TyrannoLair.def, order = 3
+Magus, stages/MagusRoom.def, order = 3
 
 ;-----------------------
 [ExtraStages]

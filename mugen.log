@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\jbahamon\Documents\GitHub\CTM\mugen.exe ff3_0 ff3_0 -s
+Command line: C:\Users\jbahamon\Documents\GitHub\CTM\mugen.exe
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -61,46 +61,70 @@ System loaded OK
 Initialize OK
 Set up graphics...timer...OK
 Initializing character info...OK
-Playing quick VS.
+Initializing select screen...finding characters...OK
 
 Entering main loop
-Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Loading character chars/ff3_0/ff3_0.def...
+Entering character select.
+attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/Ayla/Ayla.def...
   Loading info...OK
-  Loading cmd command set Crono.cmd...OK
-  Loading cns Crono.cns...OK
+  Loading cmd command set Ayla.cmd...OK
+  Loading cns Ayla.cns...OK
   Loading cns States/System.st...OK
   Loading cns States/Normal.st...OK
   Loading cns States/Specials.st...OK
   Loading cns States/Supers.st...OK
   Loading cns States/Helpers.st...OK
-  Loading cmd state entry Crono.cmd...OK
+  Loading cmd state entry Ayla.cmd...OK
   Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff Crono.sff...OK
-  Loading anim Crono.air...OK
-  Loading snd Crono.snd...OK
+  Loading sff Ayla.sff...OK
+  Loading anim Ayla.air...OK
+  Loading snd Ayla.snd...OK
   Loading pals...OK
-  4159 expressions (1206 on trigger lines)
-Character ff3_0.def loaded OK
+  3953 expressions (1213 on trigger lines)
+Character Ayla.def loaded OK
+Loading character chars/Robo/Robo.def...
+  Loading info...OK
+  Loading cmd command set Robo.cmd...OK
+  Loading cns Robo.cns...OK
+  Loading cns States/System.st...OK
+  Loading cns States/Normal.st...OK
+  Loading cns States/Specials.st...OK
+  Loading cns States/Supers.st...OK
+  Loading cns States/Helpers.st...OK
+  Loading cmd state entry Robo.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff Robo.sff...OK
+  Loading anim Robo.air...OK
+  Loading snd Robo.snd...OK
+  Loading pals...OK
+  3827 expressions (1195 on trigger lines)
+Character Robo.def loaded OK
+attempting load and start...no BGM...Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
 Start of game loop
+attempting load of sound/battle 1.mp3...hooking mixer callback...
+success!
+prebuffering BGM...
 End of game loop
-Total time: 6.69s
-Total frames: 400 	Skipped frames: 67
-Avg game rate: 59.79
-Avg frame rate: 49.78
+Total time: 183.41s
+Total frames: 10936 	Skipped frames: 2101
+Avg game rate: 59.63
+Avg frame rate: 48.17
 
-Returned from main loop
+attempting load and start...no BGM...Entering character select.
+attempting load and start...no BGM...Returned from main loop
 Deinitializing...
-Frames      : 400
-Time elapsed: 7.060 sec
-ticks: 706, tps: 100, start 52, end 758
+Frames      : 10936
+Time elapsed: 194.990 sec
+ticks: 19499, tps: 100, start 54, end 19553
 
 Clearing player cache...OK
 Freeing character info...OK
+Freeing select screen...OK
 Freeing fight data...OK
 Freeing system data...OK
 Freeing game variables...OK
@@ -108,7 +132,14 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...OK
+Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
+
+Mixer callback was entered 4013 times
+Mixer callback timing stats (last 4013 calls):
+	8.000000 median, 9.546474 avg, 4.530912 sample std. dev.
+Top 10 slowest times:	103 (1), 42 (1), 37 (2), 35 (1), 34 (2), 33 (4), 32 (2), 31 (3), 30 (4), 29 (9)
+Top 10 fastest times:	3 (2), 4 (9), 5 (48), 6 (232), 7 (668), 8 (1298), 9 (945), 10 (250), 11 (57), 12 (35)
+OK
 Deinitializing sound...OK
 Successful program termination.
 
