@@ -10,13 +10,7 @@ Reading configuration file...OK
 Initializing timer...performance timer enabled...frequency 2435872...OK
 Initializing keyboard...configuring...OK
 Initializing input engine...OK
-Initializing sound...Using SDL audio driver: dsound
-Requesting mixer parameters (44100, 16, 2, 2048)...
-Opened mixer with parameters (44100, 16, 2, 2048)...
-OK
-Initializing BGM...BGMThreadInit returned 0
-OK
-Initializing graphics...gameCoord 1280x720...render mode 0_0...trying 1280x720x16 mode 0x0...success...OK
+Initializing sound...Initializing graphics...gameCoord 640x480...render mode 0_0...trying 640x480x16 mode 0x0...success...OK
 Setting callbacks...OK
 Initializing font...OK
 Initializing game variables...OK
@@ -30,7 +24,6 @@ Options loaded OK
 Loading system...
   Load system file system.def...OK
   Load system spr...OK
-  Load system snd...OK
   Load system fonts...OK
   Load system anim...OK
   Load [Title Info]...OK
@@ -45,9 +38,10 @@ Loading system...
   Load [Survival Results Screen]...OK
   Load [Default Ending]...OK
   Load [End Credits]...OK
-  Load TitleBG...VersusBG...VictoryBG...SelectBG...OptionBG...OK
+  Load TitleBG...VersusBG...VictoryBG...Error loading VictoryBG
+SelectBG...OptionBG...OK
   Loading fight data
-    Opening fight data file data/mugen1/fight.def...OK
+    Opening fight data file data/ChronoTrigger/fight.def...OK
     Reading [Files]...OK
     Loading fonts...OK
     Load fight anim...OK
@@ -65,62 +59,11 @@ Initializing select screen...finding characters...OK
 
 Entering main loop
 Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/Ayla/Ayla.def...
-  Loading info...OK
-  Loading cmd command set Ayla.cmd...OK
-  Loading cns Ayla.cns...OK
-  Loading cns States/System.st...OK
-  Loading cns States/Normal.st...OK
-  Loading cns States/Specials.st...OK
-  Loading cns States/Supers.st...OK
-  Loading cns States/Helpers.st...OK
-  Loading cmd state entry Ayla.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff Ayla.sff...OK
-  Loading anim Ayla.air...OK
-  Loading snd Ayla.snd...OK
-  Loading pals...OK
-  3953 expressions (1213 on trigger lines)
-Character Ayla.def loaded OK
-Loading character chars/Robo/Robo.def...
-  Loading info...OK
-  Loading cmd command set Robo.cmd...OK
-  Loading cns Robo.cns...OK
-  Loading cns States/System.st...OK
-  Loading cns States/Normal.st...OK
-  Loading cns States/Specials.st...OK
-  Loading cns States/Supers.st...OK
-  Loading cns States/Helpers.st...OK
-  Loading cmd state entry Robo.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff Robo.sff...OK
-  Loading anim Robo.air...OK
-  Loading snd Robo.snd...OK
-  Loading pals...OK
-  3827 expressions (1195 on trigger lines)
-Character Robo.def loaded OK
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Start of game loop
-attempting load of sound/battle 1.mp3...hooking mixer callback...
-success!
-prebuffering BGM...
-End of game loop
-Total time: 183.41s
-Total frames: 10936 	Skipped frames: 2101
-Avg game rate: 59.63
-Avg frame rate: 48.17
-
-attempting load and start...no BGM...Entering character select.
-attempting load and start...no BGM...Returned from main loop
+Returned from main loop
 Deinitializing...
-Frames      : 10936
-Time elapsed: 194.990 sec
-ticks: 19499, tps: 100, start 54, end 19553
+Frames      : 0
+Time elapsed: 6.400 sec
+ticks: 640, tps: 100, start 6, end 646
 
 Clearing player cache...OK
 Freeing character info...OK
@@ -132,14 +75,7 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
-
-Mixer callback was entered 4013 times
-Mixer callback timing stats (last 4013 calls):
-	8.000000 median, 9.546474 avg, 4.530912 sample std. dev.
-Top 10 slowest times:	103 (1), 42 (1), 37 (2), 35 (1), 34 (2), 33 (4), 32 (2), 31 (3), 30 (4), 29 (9)
-Top 10 fastest times:	3 (2), 4 (9), 5 (48), 6 (232), 7 (668), 8 (1298), 9 (945), 10 (250), 11 (57), 12 (35)
-OK
+Deinitializing BGM...OK
 Deinitializing sound...OK
 Successful program termination.
 
