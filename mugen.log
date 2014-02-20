@@ -59,11 +59,12 @@ Initializing select screen...finding characters...OK
 
 Entering main loop
 Entering character select.
+Entering character select.
 Returned from main loop
 Deinitializing...
 Frames      : 0
-Time elapsed: 6.400 sec
-ticks: 640, tps: 100, start 6, end 646
+Time elapsed: 2.890 sec
+ticks: 289, tps: 100, start 5, end 294
 
 Clearing player cache...OK
 Freeing character info...OK
