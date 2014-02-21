@@ -45,9 +45,8 @@ font1 = Chrono.def
 font2 = trigger_bold_big.def
 font3 = trigger_bold.def
 font4 = trigger_bold_small.def
-font5 = trigger_bold.def
-;font5.height = 36         ;Uncomment to override the size of the font (Truetype fonts only)
-font6 = trigger_bold.def
+font5 = chrono_small.def
+font6 = chrono_big.def
 
 ;----------------------------
 [Music]
@@ -71,7 +70,7 @@ select.bgm.loop = 1
 select.bgm.loopstart = 3008869
 select.bgm.loopend = 7047801
   ;Music to play at versus screen.
-vs.bgm = sound/Determination.mp3
+vs.bgm = sound/EpochWarp.mp3
 vs.bgm.volume = 100
 vs.bgm.loop = 0
 vs.bgm.loopstart =
@@ -88,7 +87,7 @@ victory.bgm.loopend =
 [Title Info]
 fadein.time = 10
 fadeout.time = 10
-menu.pos = 400,370
+menu.pos = 400,350
 menu.item.font = 2,0,0, 128, 128, 128
 menu.item.active.font = 2,0,0, 255, 255, 255
 menu.item.spacing = 0, 100
@@ -136,7 +135,7 @@ velocity = -1, -1
 type  = normal
 spriteno = 2,0
 layerno = 0
-start = 80,360
+start = 80,340
 mask = 0
 
 
@@ -185,8 +184,8 @@ mask = 1
 
 ; Gaspar
 [Begin Action 4]
-4,0, 0,0, 20
-4,1, 0,0, 32
+4,0, 0,0, 26
+4,1, 0,0, 48
 
 ;----------------------------
 [Infobox] ;(new in MUGEN 1.0)
@@ -217,7 +216,7 @@ fadeout.time = 10
 rows = 1
 columns = 7
 wrapping = 0              ;1 to let cursor wrap around
-pos = 117,390              ;Position to draw to
+pos = 117,368             ;Position to draw to
 showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 0    ;1 to allow cursor to move over empty boxes
 cell.size = 58, 58       ;x,y size of each cell (in pixels)
@@ -227,14 +226,14 @@ cell.random.spr = 151,0   ;Icon for random select (don't use animation)
 cell.random.switchtime = 4;Time to wait before changing to another random portrait
 p1.cursor.startcell = 0,0
 p1.cursor.active.anim = 160
-p1.cursor.done.spr = 161,0
+p1.cursor.done.spr = 160,0
 p1.cursor.move.snd = 100,0
 p1.cursor.done.snd = 100,1
 p1.random.move.snd = 100,0
 p2.cursor.startcell = 0,6
 p2.cursor.active.anim = 170
-p2.cursor.done.spr = 171,0
-p2.cursor.blink = 1       ;1 to blink p2's cursor if overlapping p1's
+p2.cursor.done.spr = 170,0
+p2.cursor.blink = 0       ;1 to blink p2's cursor if overlapping p1's
 p2.cursor.move.snd = 100,0
 p2.cursor.done.snd = 100,1
 p2.random.move.snd = 100,0
@@ -245,76 +244,78 @@ cancel.snd = 100,2
 portrait.spr = 9000,0     ;Do not change from 9000,0
 portrait.offset = 4,4
 portrait.scale = 1,1
-title.offset = 320,60     ;Position of title (Arcade Mode, etc)
-title.font = 1,0,0, 145, 42, 66        ;Font of title (-1 for none)
+title.offset = 320,21     ;Position of title (Arcade Mode, etc)
+title.font = 6,0,0        ;Font of title (-1 for none)
+
 ;Big portraits
 p1.face.spr = 9000,1      ;Do not change from 9000,1
-p1.face.offset = 40,44      ;Position to put big portrait
+p1.face.offset = 40,57      ;Position to put big portrait
 p1.face.scale = 1,1
 p1.face.facing = 1
 p1.face.window = 0,0, 639,479
 p2.face.spr = 9000,1
-p2.face.offset = 360,44
+p2.face.offset = 360,57
 p2.face.scale = 1,1
 p2.face.facing = 1
-p2.face.window = 540,0, 1279,959
+p2.face.window = 270,0, 639,479
+
 ;Name
-p1.name.offset = 128,355   ;Position to put name
-p1.name.font = 3,3,1      ;Set to -1 for no display
-p1.name.spacing = 7,12   ;Space between each name for players on the same team
-p2.name.offset = 1230,620
-p2.name.font = 3,1,-1
-p2.name.spacing = -15,25
+p1.name.offset = 50,90   ;Position to put name
+p1.name.font = 5,0,1      ;Set to -1 for no display
+p1.name.spacing = 0,20   ;Space between each name for players on the same team
+p2.name.offset = 370,90
+p2.name.font = 5,0, 1
+p2.name.spacing = 0,20
 ;Stage select
-stage.pos = 320,350
-stage.active.font = 2,0,0, 128, 128, 128
-stage.active2.font = 2,0,0, 255, 255, 255  ;Second font color for blinking
-stage.done.font = 1,0
+stage.pos = 320,480
+stage.active.font = 5,0,0, 200, 200, 200
+stage.active2.font = 5,0,0, 255, 255, 255  ;Second font color for blinking
+stage.done.font = 5,0
 
 ;Team menu
 teammenu.move.wrapping = 1
-p1.teammenu.pos = 60, 130
+p1.teammenu.pos = 50, 130
 ;p1.teammenu.bg.spr =
-p1.teammenu.selftitle.font = 2,3, 1
+p1.teammenu.selftitle.font = 4,3, 1
 p1.teammenu.selftitle.text = "Team Mode"
-p1.teammenu.enemytitle.font = 2,3, 1
+p1.teammenu.enemytitle.font = 2,0,0
 p1.teammenu.enemytitle.text = "Team Mode"
 p1.teammenu.move.snd = 100,0
 p1.teammenu.value.snd = 100,0
 p1.teammenu.done.snd = 100,1
-p1.teammenu.item.offset = 0,55
-p1.teammenu.item.spacing = 0,60
+p1.teammenu.item.offset = 30,50
+p1.teammenu.item.spacing = 0,40
 p1.teammenu.item.font = 3,0, 1
 p1.teammenu.item.active.font = 3,3, 1
 p1.teammenu.item.active2.font = 3,3, 1, 128,128,128;Second font color for blinking
-p1.teammenu.item.cursor.offset = -15, -40
-p1.teammenu.item.cursor.anim = 160
+p1.teammenu.item.cursor.offset = -5, -12
+p1.teammenu.item.cursor.anim = 180
 p1.teammenu.value.icon.offset = 80,-6
 p1.teammenu.value.icon.spr = 181,0
 p1.teammenu.value.empty.icon.offset = 80,-6
 p1.teammenu.value.empty.icon.spr = 182,0
 p1.teammenu.value.spacing = 30,0
 ;p2 team
-p2.teammenu.pos = 1200, 130
+p2.teammenu.pos = 590, 130
 ;p2.teammenu.bg.spr =
-p2.teammenu.selftitle.font = 3,1, -1
+p2.teammenu.selftitle.font = 4,3, -1
 p2.teammenu.selftitle.text = "Team Mode"
-p2.teammenu.enemytitle.font = 3,1, -1
+p2.teammenu.enemytitle.font = 2,0, 0
 p2.teammenu.enemytitle.text = "Team Mode"
 p2.teammenu.move.snd = 100,0
 p2.teammenu.value.snd = 100,0
 p2.teammenu.done.snd = 100,1
-p2.teammenu.item.offset = 0,110
-p2.teammenu.item.spacing = 0,60
+p2.teammenu.item.offset = -30, 50
+p2.teammenu.item.spacing = 0,40
 p2.teammenu.item.font = 3,0, -1
-p2.teammenu.item.active.font = 3,1, -1
-p2.teammenu.item.active2.font = 3,1, -1, 224,224,240 ;Second font color for blinking
-p2.teammenu.item.cursor.offset = 30, 0
+p2.teammenu.item.active.font = 3,3, -1
+p2.teammenu.item.active2.font = 3,1, -1, 128,128,128 ;Second font color for blinking
+p2.teammenu.item.cursor.offset = 5, -12
 p2.teammenu.item.cursor.anim = 190
-p2.teammenu.value.icon.offset = -210,1
+p2.teammenu.value.icon.offset = -80, -6
 p2.teammenu.value.icon.spr = 191,0
-p2.teammenu.value.empty.icon.offset = -210,1
-p2.teammenu.value.empty.icon.spr = 192,0
+p2.teammenu.value.empty.icon.offset = -80, -6
+p2.teammenu.value.empty.icon.spr = 182,0
 p2.teammenu.value.spacing = -30,0
 ; Debug screen element (can be used for testing fonts)
 ;sysexplod0.text =
@@ -325,18 +326,26 @@ p2.teammenu.value.spacing = -30,0
 160,0, 0,0, 3
 160,1, 0,0, 3
 
+; P1 cursor done
+[Begin Action 161]
+160,0, 0,0, -1
+
 ;P2 active cursor
 [Begin Action 170] 
 170,0, 0,0, 3
 170,1, 0,0, 3
 
+; P2 done cursor
+[Begin Action 171]
+170,0, 0,0, -1
+
 ;P1 Team mode cursor
 [Begin Action 180] 
--1,0, 0,0, 1
+180,0, 0,0, 1
 
 ;P2 Team mode cursor
 [Begin Action 190] 
--1,0, 0,0, 1
+180,0, 0,0, -1, H
 
 ;-----------------------
 ;Character select screen background
@@ -345,37 +354,35 @@ bgclearcolor = 0,0,0
 
 [SelectBG Background]
 type  = normal
-spriteno = 0,0
+spriteno = 100,0
 layerno = 0
 start = 0,0
 tile  = 1,1
-trans = addalpha
-alpha = 128,128
-velocity = -1, -1
+velocity = .5, .5
 
 [SelectBG Background]
 type  = normal
 spriteno = 150,1
 layerno = 0
-start = -284,40
-
-[SelectBG Background]
-type  = normal
-spriteno = 150,2
-layerno = 0
-start = -284,328
+start = -284,52
 
 [SelectBG Background]
 type  = normal
 spriteno = 150,1
 layerno = 0
-start = 36,40
+start = 36,52
 
-[SelectBG Background]
-type  = normal
-spriteno = 150,2
-layerno = 0
-start = 36,328
+;[SelectBG Background]
+;type  = normal
+;spriteno = 150,2
+;layerno = 0
+;start = -284,328
+;
+;[SelectBG Background]
+;type  = normal
+;spriteno = 150,2
+;layerno = 0
+;start = 36,328
 
 
 
