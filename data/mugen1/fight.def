@@ -1,4 +1,4 @@
-﻿; Definition of fight screen
+; Definition of fight screen
 
 ; Motif: MUGEN1
 ; Optimal resolution: 1280x720
@@ -34,7 +34,7 @@ common.snd = common.snd
 
 ;-----------------------------------------------------------
 [FightFx]
-scale = 4
+scale = 2
 
 ;-----------------------------------------------------------
 [Lifebar]

@@ -249,12 +249,12 @@ title.font = 6,0,0        ;Font of title (-1 for none)
 
 ;Big portraits
 p1.face.spr = 9000,1      ;Do not change from 9000,1
-p1.face.offset = 40,57      ;Position to put big portrait
+p1.face.offset = 40,56      ;Position to put big portrait
 p1.face.scale = 1,1
 p1.face.facing = 1
 p1.face.window = 0,0, 639,479
 p2.face.spr = 9000,1
-p2.face.offset = 360,57
+p2.face.offset = 360,56
 p2.face.scale = 1,1
 p2.face.facing = 1
 p2.face.window = 270,0, 639,479
@@ -388,36 +388,37 @@ start = 36,52
 
 ;-------------------------------------------------------------------
 [VS Screen]
-time = 150                ;Time to show screen
+time = 180                ;Time to show screen
 fadein.time = 20
 fadeout.time = 25
+
 ;Match text in arcade modes
 match.text = "Match %i"   ;%i can be used for the match number
-match.offset = 20, 709
-match.font = 2,0,1
+match.offset = 320, 40
+match.font = 6,0,0
+
 ;Big portraits
 p1.spr = 9000, 1
-p1.offset =  60,30
+p1.offset =  67,100
 p1.facing = 1
 p1.scale = 1,1
-p1.window = 60,30, 539,589
+p1.window = 0, 0, 639,479
 p2.spr = 9000, 1
-p2.offset = 1220,30
-p2.facing = -1
+p2.offset = 332,100
+p2.facing = 1
 p2.scale = 1,1
-p2.window = 741,30, 1220,589
+p2.window = 0, 0, 639,479
 ;Names
-p1.name.offset = 110,650  ;Position to put name
-p1.name.font = 3,3,1      ;Set to -1 for no display
-p1.name.spacing = 0,44    ;Space between each name for players on the same team
-p2.name.offset = 1170,650
-p2.name.font = 3,1,-1
-p2.name.spacing = 0,44
+p1.name.offset = 65,405 ;Position to put name
+p1.name.font = 6,0,1      ;Set to -1 for no display
+p1.name.spacing = 0,40    ;Space between each name for players on the same team
+p2.name.offset = 575,405
+p2.name.font = 6,0,-1
+p2.name.spacing = 0,40
 
 ;-----------------------
 ;VS Match up screen background
 [VersusBGdef] 
-
 
 [VersusBG 1]
 type  = normal
@@ -426,8 +427,44 @@ start = 0,0
 tile  = 1,1
 velocity = -1, -1
 
+[VersusBG 1]
+type  = anim
+actionno = 200
+start = 0,0
+layerno = 1
+
+[VersusBG Box1]
+type  = normal
+spriteno = 150,1
+layerno = 0
+start = -256,96
+
+[VersusBG Box2]
+type  = normal
+spriteno = 150,1
+layerno = 0
+start = 8,96
+
+; White BG
 [Begin Action 200]
--1,0, 0,0, -1
+200,0, 0,0, 106, , AS0D256
+200,0, 0,0, 4, , A
+200,0, 0,0, 4, , AS240D256
+200,0, 0,0, 4, , AS224D256
+200,0, 0,0, 4, , AS208D256
+200,0, 0,0, 4, , AS192D256
+200,0, 0,0, 4, , AS176D256
+200,0, 0,0, 4, , AS160D256
+200,0, 0,0, 4, , AS144D256
+200,0, 0,0, 4, , AS128D256
+200,0, 0,0, 4, , AS112D256
+200,0, 0,0, 4, , AS96D256
+200,0, 0,0, 4, , AS80D256
+200,0, 0,0, 4, , AS64D256
+200,0, 0,0, 4, , AS48D256
+200,0, 0,0, 4, , AS32D256
+200,0, 0,0, 4, , AS16D256
+-1,0, 0,0, 4
 
 [Begin Action 201]
 -1,0, 0,0, -1
