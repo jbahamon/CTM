@@ -409,11 +409,11 @@ p2.facing = 1
 p2.scale = 1,1
 p2.window = 0, 0, 639,479
 ;Names
-p1.name.offset = 65,405 ;Position to put name
-p1.name.font = 6,0,1      ;Set to -1 for no display
+p1.name.offset = 188,405 ;Position to put name
+p1.name.font = 6,0,0      ;Set to -1 for no display
 p1.name.spacing = 0,40    ;Space between each name for players on the same team
-p2.name.offset = 575,405
-p2.name.font = 6,0,-1
+p2.name.offset = 452,405
+p2.name.font = 6,0,0
 p2.name.spacing = 0,40
 
 ;-----------------------

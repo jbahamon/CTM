@@ -335,13 +335,13 @@ KO.anim    = 200            ;.
 KO.snd     = 2,0            ;Sound to play for KO announcement
 
 ; Double KO
-DKO.offset = 160, 70
+DKO.offset = 320, 240
 DKO.font   = 1,5
 DKO.text   = Double K.O.
 DKO.displaytime = 60
 DKO.snd    = 2,1
 ; Time Over
-TO.offset  = 160, 70
+TO.offset  = 320, 240
 TO.font    = 1,5
 TO.text    = Time Over
 TO.displaytime = 60
@@ -356,17 +356,17 @@ over.time = 210            ;Time to wait before round ends
 ; Time to wait before showing win/draw message
 win.time = 60
 ; Win text
-win.offset = 160, 70
+win.offset = 320, 240
 win.font = 1,0
-win.text = %s Wins
+win.text = %s Wins!
 win.displaytime = 540
 ; 2-player win text
-win2.offset = 160, 70
+win2.offset = 320, 240
 win2.font = 1,0
-win2.text = %s and %s Win
+win2.text = %s and %s Win!
 win2.displaytime = 540
 ; Draw text
-draw.offset = 160, 70
+draw.offset = 320, 240
 draw.font = 1,0
 draw.text = Draw Game
 draw.displaytime = 540
