@@ -127,7 +127,7 @@ p1.pos    = 285,70
 p1.bg0.spr = 41,0
 p1.bg1.anim  = 40
 ;p1.mid.spr = 42,0
-p1.front.spr = 43,0
+p1.front.anim = 43
 p1.range.x = -9,-190
 p1.counter.offset = -211,17 
 p1.counter.font = 3,0, 0
@@ -140,7 +140,7 @@ p2.bg1.anim = 40
 p2.bg1.facing = -1
 ;p2.mid.spr = 42,0
 ;p2.mid.facing = -1
-p2.front.spr = 43,0
+p2.front = 43
 p2.front.facing = -1
 p2.range.x  = 12,190
 p2.counter.offset = 211,17
@@ -274,19 +274,19 @@ framespercount = 60
 
 ;-----------------------------------------------------------
 [Combo]
-team1.pos = 10,80         ;Coords to show
+team1.pos = 20,160         ;Coords to show
 team1.start.x = -40       ;Starting x-coords
 team1.counter.font = 2,4,1
 team1.counter.shake = 1   ;Set to 1 to shake count on hit
-team1.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
+team1.text.text = "Hit Stream!"   ;You can use %i to show count in the text, eg "%i Hit!"
 team1.text.font = 1,0,1
 team1.text.offset = 3,0   ;Offset of text
 team1.displaytime = 90    ;Time to show text
-team2.pos = 309,80         ;Coords to show
-team2.start.x = 359       ;Starting x-coords
+team2.pos = 618,160         ;Coords to show
+team2.start.x = 718       ;Starting x-coords
 team2.counter.font = 2,4,-1
 team2.counter.shake = 1   ;Set to 1 to shake count on hit
-team2.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
+team2.text.text = "Hit Stream!"   ;You can use %i to show count in the text, eg "%i Hit!"
 team2.text.font = 1,0,-1
 team2.text.offset = 3,0   ;Offset of text
 team2.displaytime = 90    ;Time to show text
@@ -302,7 +302,7 @@ pos = 0,0
 
 ; ROUND X
 round.time = 0              ;Time to show round display
-round.default.offset = 160, 100
+round.default.offset = 320, 200
 ; Default component to show for each round. Text can include a %i to
 ; the round number. Use "round.default.anim" for animation instead of
 ; text.
@@ -337,13 +337,13 @@ KO.snd     = 2,0            ;Sound to play for KO announcement
 ; Double KO
 DKO.offset = 320, 240
 DKO.font   = 1,5
-DKO.text   = Double K.O.
+DKO.text   = Double K.O.!
 DKO.displaytime = 60
 DKO.snd    = 2,1
 ; Time Over
 TO.offset  = 320, 240
 TO.font    = 1,5
-TO.text    = Time Over
+TO.text    = Time Over!
 TO.displaytime = 60
 TO.snd     = 2,2
 KO.sndtime = 0             ;Time to play sound for KO, DKO and TO.
@@ -370,6 +370,9 @@ draw.offset = 320, 240
 draw.font = 1,0
 draw.text = Draw Game
 draw.displaytime = 540
+
+[Begin Action 43]
+43,0, 0,0, 10, , A
 
 ;"Fight!" Animation
 [Begin Action 80]
@@ -399,16 +402,16 @@ draw.displaytime = 540
 
 ;-----------------------------------------------------------
 [WinIcon]
-p1.pos = 34,43    ;33,43
-p2.pos = 284,43   ;286,43
+p1.pos = 270,8    ;33,43
+p2.pos = 370,8   ;286,43
 ; Offset for next icon (x,y)
-p1.iconoffset = 12,0  
-p2.iconoffset = -12,0
+p1.iconoffset = -22,0  
+p2.iconoffset = 22,0
 ; Counter text font and offset for representing wins
 p1.counter.offset = 0,0
-p1.counter.font = 2,1
+p1.counter.font = 2,4,1
 p2.counter.offset = 0,0
-p2.counter.font = 2,1
+p2.counter.font = 2,4,1
 ; Win by normal
 p1.n.spr = 100,0
 p2.n.spr = 100,0

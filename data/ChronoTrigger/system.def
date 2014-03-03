@@ -268,17 +268,17 @@ p2.name.font = 5,0, 1
 p2.name.spacing = 0,20
 ;Stage select
 stage.pos = 320,480
-stage.active.font = 5,0,0, 200, 200, 200
-stage.active2.font = 5,0,0, 255, 255, 255  ;Second font color for blinking
+stage.active.font = 5,0,0, 255, 255, 255
+stage.active2.font = 5,0,0, 200, 200, 200;Second font color for blinking
 stage.done.font = 5,0
 
 ;Team menu
 teammenu.move.wrapping = 1
 p1.teammenu.pos = 50, 130
 ;p1.teammenu.bg.spr =
-p1.teammenu.selftitle.font = 4,3, 1
+p1.teammenu.selftitle.font = 5,0,1
 p1.teammenu.selftitle.text = "Team Mode"
-p1.teammenu.enemytitle.font = 2,0,0
+p1.teammenu.enemytitle.font = 5,0,1
 p1.teammenu.enemytitle.text = "Team Mode"
 p1.teammenu.move.snd = 100,0
 p1.teammenu.value.snd = 100,0
@@ -298,9 +298,9 @@ p1.teammenu.value.spacing = 30,0
 ;p2 team
 p2.teammenu.pos = 590, 130
 ;p2.teammenu.bg.spr =
-p2.teammenu.selftitle.font = 4,3, -1
+p2.teammenu.selftitle.font = 5,0,-1
 p2.teammenu.selftitle.text = "Team Mode"
-p2.teammenu.enemytitle.font = 2,0, 0
+p1.teammenu.enemytitle.font = 5,0,-1
 p2.teammenu.enemytitle.text = "Team Mode"
 p2.teammenu.move.snd = 100,0
 p2.teammenu.value.snd = 100,0
@@ -514,23 +514,23 @@ debuginfo = 0             ;Set to 0 to hide debugging info (debug mode only)
 ;Continue screen definition
 [Continue Screen]
 enabled = 1               ;Set to 1 to show continue screen, 0 to disable
-pos = 640,240             ;Position
+pos = 320,120              ;Position
 ;***Known issue*** The display elements below use the fight.def resources
 ;instead of the ones defined in this file.
-continue.text = "CONTINUE?"
-continue.font = 1,0,0
+continue.text = "Continue?"
+continue.font = 2,0,0
 continue.offset = 0,0
 ;Inactive and active (selected) YES/NO text
-yes.text = "YES"
-yes.font = 1,0,0, 128,128,128
+yes.text = "Yes"
+yes.font = 2,0,0, 128,128,128
 yes.offset = -80, 60
-yes.active.text = "YES"
+yes.active.text = "Yes"
 yes.active.font = 1,3,0
 yes.active.offset = -80, 60
-no.text = "NO"
-no.font = 1,0,0, 128,128,128
+no.text = "No"
+no.font = 2,0,0, 128,128,128
 no.offset = 80, 60
-no.active.text = "NO"
+no.active.text = "No"
 no.active.font = 1,3,0
 no.active.offset = 80, 60
 
@@ -550,18 +550,18 @@ time = 300                ;Time to show screen
 fadein.time = 8
 fadeout.time = 15
 ;Winner's portrait and name
-p1.offset = 400,-40
+p1.offset = 200,-20
 p1.spr = 9000,2
 p1.facing = 1
 p1.scale = 1,1
-p1.window = 0,0, 1279,500
-p1.name.offset = 40,570
+p1.window = 0,0, 639,250
+p1.name.offset = 20,285
 p1.name.font = 3,3,1
 ;Win quote text
 winquote.text = "Winner!" ;Default win quote text to show
-winquote.offset = 40,615
+winquote.offset = 20,307
 winquote.font = 5,0,1
-winquote.window = 38,521, 1241,708
+winquote.window = 19,260, 620,354
 winquote.textwrap = w     ;Word wrap
 
 ;-----------------------
@@ -576,7 +576,7 @@ winquote.textwrap = w     ;Word wrap
 enabled = 1               ;Set to 1 to show win screen, 0 to disable
 wintext.text = "Congratulations!"
 wintext.font = 3,0,0
-wintext.offset = 640,240
+wintext.offset = 320,120
 wintext.displaytime = -1
 wintext.layerno = 2
 fadein.time = 32
@@ -606,7 +606,7 @@ storyboard =              ;Credits storyboard filename
 enabled = 1
 winstext.text = "Rounds survived: %i"  ;Use %i for win counter
 winstext.font = 3,0,0
-winstext.offset = 640,240
+winstext.offset = 320,120
 winstext.displaytime = -1
 winstext.layerno = 2
 fadein.time = 32
@@ -617,8 +617,8 @@ roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise
 ;-------------------------------------------------------------------
 ;Options screen definition
 [Option Info]
-title.offset = 640,38
-title.font = 4,0,0
+title.offset = 320,19
+title.font = 6,0,0
 cursor.move.snd = 100,0
 cursor.done.snd = 100,1
 cancel.snd = 100,2
@@ -626,11 +626,15 @@ cancel.snd = 100,2
 ;-------------------
 ;Options screen background
 [OptionBGdef] 
+bgclearcolor = 0,0,0
 
 [OptionBG 1]
 type  = normal
-spriteno = 100,0
+spriteno = 0,0
 start = 0,0
 tile  = 1,1
+trans = addalpha
+alpha = 128, 128
 velocity = -1, -1
+
 
