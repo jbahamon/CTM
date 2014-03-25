@@ -7,7 +7,7 @@ Parse command line OK
 Initializing...
 Allocating game variables
 Reading configuration file...OK
-Initializing timer...performance timer enabled...frequency 2435877...OK
+Initializing timer...performance timer enabled...frequency 2435884...OK
 Initializing keyboard...configuring...OK
 Initializing input engine...OK
 Initializing sound...Initializing graphics...gameCoord 640x480...render mode 0_0...trying 640x480x16 mode 0x0...success...OK
@@ -76,40 +76,40 @@ Loading character chars/Crono/Crono.def...
   Loading pals...OK
   4142 expressions (1211 on trigger lines)
 Character Crono.def loaded OK
-Loading character chars/Marle/Marle.def...
+Loading character chars/Magus/Magus.def...
   Loading info...OK
-  Loading cmd command set Marle.cmd...OK
-  Loading cns Marle.cns...OK
+  Loading cmd command set Magus.cmd...OK
+  Loading cns Magus.cns...OK
   Loading cns States/System.st...OK
   Loading cns States/Normal.st...OK
   Loading cns States/Specials.st...OK
   Loading cns States/Supers.st...OK
   Loading cns States/Helpers.st...OK
-  Loading cmd state entry Marle.cmd...OK
+  Loading cmd state entry Magus.cmd...OK
   Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff Marle.sff...OK
-  Loading anim Marle.air...OK
+  Loading sff Magus.sff...OK
+  Loading anim Magus.air...OK
   Loading pals...OK
-  3891 expressions (1228 on trigger lines)
-Character Marle.def loaded OK
+  4732 expressions (1281 on trigger lines)
+Character Magus.def loaded OK
 Initializing stage...
   Loading BG...OK
   Allocating helpers...OK
 Stage initialized OK
 Start of game loop
 End of game loop
-Total time: 44.79s
-Total frames: 2688 	Skipped frames: 0
+Total time: 74.51s
+Total frames: 4471 	Skipped frames: 0
 Avg game rate: 60.01
 Avg frame rate: 60.01
 
 Entering character select.
 Returned from main loop
 Deinitializing...
-Frames      : 2688
-Time elapsed: 48.410 sec
-ticks: 4841, tps: 100, start 7, end 4848
+Frames      : 4471
+Time elapsed: 77.900 sec
+ticks: 7790, tps: 100, start 6, end 7796
 
 Clearing player cache...OK
 Freeing character info...OK
