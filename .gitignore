@@ -1,2 +1,3 @@
 *.mp3
 !EpochWarp.mp3
+*.log
