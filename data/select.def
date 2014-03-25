@@ -95,8 +95,8 @@ stages/OceanPalaceElevator.def
  ;For example, for 4,3,1 you will fight up to 4 randomly-picked
  ;characters who have order=1, followed by 3 with order=2 and 1 with
  ;order=3.
-arcade.maxmatches = 6,1,1,0,0,0,0,0,0,0
+arcade.maxmatches = 0,0,5,0,0,0,0,0,0,0
 
  ;Maximum number of matches to fight before game ends in Team Mode.
  ;Like arcade.maxmatches, but applies to Team Battle.
-team.maxmatches = 4,1,1,0,0,0,0,0,0,0
+team.maxmatches = 0,0,5,0,0,0,0,0,0,0
