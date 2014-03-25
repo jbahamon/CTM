@@ -1,27 +1,24 @@
-[submodule ".\\chars\\Ayla"]
-	path = .\\chars\\Ayla
+[submodule "chars/Ayla"]
+	path = chars/Ayla
 	url = https://github.com/jbahamon/ctm-ayla.git
-[submodule ".\\chars\\Crono"]
-	path = .\\chars\\Crono
+[submodule "chars/Crono"]
+	path = chars/Crono
 	url = https://github.com/jbahamon/ctm-crono.git
-[submodule ".\\chars\\Robo"]
-	path = .\\chars\\Robo
+[submodule "chars/Robo"]
+	path = chars/Robo
 	url = https://github.com/jbahamon/ctm-robo.git
-[submodule ".\\chars\\Marle"]
-	path = .\\chars\\Marle
+[submodule "chars/Marle"]
+	path = chars/Marle
 	url = https://github.com/jbahamon/ctm-marle.git
-[submodule ".\\chars\\Lucca"]
-	path = .\\chars\\Lucca
+[submodule "chars/Lucca"]
+	path = chars/Lucca
 	url = https://github.com/jbahamon/ctm-lucca.git
-[submodule ".\\chars\\Frog"]
-	path = .\\chars\\Frog
+[submodule "chars/Frog"]
+	path = chars/Frog
 	url = https://github.com/jbahamon/ctm-frog.git
-[submodule ".\\chars\\Magus"]
-	path = .\\chars\\Magus
+[submodule "chars/Magus"]
+	path = chars/Magus
 	url = https://github.com/jbahamon/ctm-magus.git
-[submodule ".\\stages"]
-	path = .\\stages
+[submodule "stages"]
+	path = stages
 	url = https://github.com/jbahamon/ctm-stages.git
-[submodule "chars/InnerLavos"]
-	path = chars/InnerLavos
-	url = https://github.com/jbahamon/ctm-inner-lavos.git
