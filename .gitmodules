@@ -22,3 +22,24 @@
 [submodule "stages"]
 	path = mugen/stages
 	url = https://github.com/jbahamon/ctm-stages.git
+[submodule "mugen/chars/ctm-ayla"]
+	path = mugen/chars/ctm-ayla
+	url = https://github.com/jbahamon/ctm-ayla.git
+[submodule "mugen/chars/ctm-crono"]
+	path = mugen/chars/ctm-crono
+	url = https://github.com/jbahamon/ctm-crono.git
+[submodule "mugen/chars/ctm-lucca"]
+	path = mugen/chars/ctm-lucca
+	url = https://github.com/jbahamon/ctm-lucca.git
+[submodule "mugen/chars/ctm-marle"]
+	path = mugen/chars/ctm-marle
+	url = https://github.com/jbahamon/ctm-marle.git
+[submodule "mugen/chars/ctm-magus"]
+	path = mugen/chars/ctm-magus
+	url = https://github.com/jbahamon/ctm-magus.git
+[submodule "mugen/chars/ctm-robo"]
+	path = mugen/chars/ctm-robo
+	url = https://github.com/jbahamon/ctm-robo.git
+[submodule "mugen/chars/ctm-frog"]
+	path = mugen/chars/ctm-frog
+	url = https://github.com/jbahamon/ctm-frog.git
