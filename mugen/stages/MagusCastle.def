@@ -1,0 +1,438 @@
+ ; Definition of stage 0 (training stage)
+; *** denotes values you should change/check for each stage.
+; The term "background" is used to mean both backgrounds and foregrounds.
+
+;--------------------------------------------------------
+[Info]
+ ;Name of the stage.
+name = "Magus' Castle"
+displayname = "Magus' Castle" ;Name to display
+versiondate = 02,05,2014    ;Version date of stage (MM,DD,YYYY or X.XX)
+mugenversion = 1.0          ;Version of M.U.G.E.N stage works on (X.XX)
+author = "Silent Protagonist"         ;Stage author name
+
+;--------------------------------------------------------
+[Camera]
+ ;Camera starting position: Usually 0 for both
+startx = 0
+starty = 0
+
+ ;Left and right bound of camera
+ ;You may want to fiddle a bit with these values to make sure the
+ ;background doesn't move too far or too little
+ ;***
+boundleft = -40
+boundright = 40
+
+ ;High and low bound of camera
+ ;High is a negative number. Make is more negative if you want to
+ ;camera to be able to move higher.
+ ;Low should usually be 0.
+ ;If omitted, defaults to -25 and 0 respectively
+ ;***
+boundhigh = -100
+boundlow = 0
+
+ ;This is how much the camera will move vertically towards the
+ ;highest player. Valid values are from 0 to 1. A value of 0 will mean
+ ;the camera does not move up at all. A value of 1 will makes the camera
+ ;follow the highest player.
+ ;Typically .2 for normal-sized backgrounds. You may need to pull this
+ ;value up for taller backgrounds.
+verticalfollow = 0.4
+
+ ;Minimum vertical distance the highest player has to be from the floor,
+ ;before the camera starts to move up to follow him. For extremely
+ ;tall stages, a floor tension of about 20-30 coupled with a
+ ;vertical-follow of .8 allows the camera to follow the action.
+floortension = 20
+
+ ;Horizontal distance player is from edge before camera starts to move
+ ;left or right. Typically 50 or 60.
+tension = 50
+
+ ;Number of pixels beyond the top and bottom of the screen that may
+ ;be drawn.  Overdraw specifies the how much can be seen during an
+ ;EnvShake.  Overdraw pixels will also be used when the screen aspect
+ ;is taller than the stage aspect.
+overdrawhigh = 0
+overdrawlow = 0
+
+ ;Number of pixels into the top and bottom of the screen that may be
+ ;cut from drawing when the screen aspect is shorter than the stage
+ ;aspect.  These parameters suggest a guideline, and the actual
+ ;number of pixels cut depends on the difference in aspect.
+cuthigh = 35
+cutlow = 25
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+ ;p1startx is typically -70 and p2startx is 70.
+ ;p1starty should be 0.
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+
+;--------------------------------------------------------
+[Bound]
+ ;Distance from left/right edge of screen that player can move to
+ ;Typically 15
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+ ;"Ground" level where players stand at, measured in pixels from the
+ ;top of the screen.
+ ;Adjust this value to move the ground level up/down in the screen.
+ ;***
+zoffset = 210
+
+ ;Leave this at 1. It makes the players face each other
+autoturn = 1
+
+ ;Set the following to 1 to have the background reset itself between
+ ;rounds.
+resetBG = 1
+
+ ;Width and height of the local coordinate space of the stage.
+localcoord = 320, 240
+
+ ;Horizontal and vertical scaling factor for drawing.
+xscale = 1
+yscale = 1
+
+;--------------------------------------------------------
+[Shadow]
+ ;This is the shadow darkening intensity. Valid values range from
+ ;0 (lightest) to 256 (darkest). Defaults to 128 if omitted.
+intensity = 70
+
+ ;This is the shadow color given in r,g,b. Valid values for each
+ ;range from 0 (lightest) to 255 (darkest).
+ ;Defaults to 0,0,0 if omitted.
+ ;intensity and color's effects add up to give the final shadow
+ ;result.
+color = 0,0,0
+
+ ;This is the scale factor of the shadow. Use a big scale factor
+ ;to make the shadow longer. You can use a NEGATIVE scale factor
+ ;to make the shadow fall INTO the screen.
+ ;Defaults to 0.4 if omitted.
+yscale = 	1.1
+
+ ;This parameter lets you set the range over which the shadow is
+ ;visible. The first value is the high level, and the second is
+ ;the middle level. Both represent y-coordinates of the player.
+ ;A shadow is invisible if the player is above the high level,
+ ;and fully visible if below the middle level. The shadow is
+ ;faded in between the two levels. This gives an effect of the
+ ;shadow fading away as the player gets farther away from the
+ ;ground. If omitted, defaults to no level effects (shadow is
+ ;always fully visible).
+fade.range = 0,0
+
+;--------------------------------------------------------
+[Reflection]
+ ;Intensity of reflection (from 0 to 256). Set to 0 to have no
+ ;reflection. Defaults to 0.
+intensity = 0
+
+;--------------------------------------------------------
+[Music]
+ ;Put a filename for a MOD, MP3 or MIDI here, or just leave it
+ ;blank if you don't want music. If an invalid filename is
+ ;given, then no music will play. To play CD audio, put
+ ;the track number followed by ".da". Using a track number of
+ ;0 will play a random audio track. For example, to play
+ ;track 3 from a music CD, use:
+ ;  bgmusic = 3.da
+bgmusic = sound/Confusing Melody.mp3
+
+;bgmloopstart = <sample number>
+;bgmloopend = <sample number>
+
+ ;Adjust the volume. 100 is for 100%.
+bgmvolume = 100
+
+;========================================================
+;--------------------------------------------------------
+; Background definition
+; ***
+;-------------------------------------
+; [BG x]
+; type = ?       "Normal"/"Parallax"  (def: "normal")
+; spriteno = ?, ? Sprite group and number: groupno, imgno  (req'd)
+; start = ?, ?   Starting location (integer)  (def: 0, 0)
+; delta = ?, ?   Change in location per camera unit moved (float)  (def: 1,1)
+; trans = ?      Transparency settings: "none"/"add"/"add1"/"sub"" (def: "none")
+; mask = ?       Masking (int): 0 - off, 1 - on  (def: 0)
+; velocity = ?, ? Velocity: x, y (float): speed background moves (def: 0, 0)
+; tile = ?, ?    Tiling: xtile, ytile (int): 0 - off, 1 - infinite,
+;                        >1 - tile that number of times  (def: 0, 0) - only for Normal BG
+; tilespacing = ?, ? Tiling: x, y (int) : space between tiles (def: 0, 0)
+;  Parallax-only:
+; xscale = ?, ?    Top xscale, bottom xscale (float)
+; width = ?, ?     Top width, bottom width (int)  (use either this or above, but not both)
+; yscalestart = ?  Starting y-scale (float, in percent)  (def: 100)
+; yscaledelta = ?  Change in y-scale per unit (float, in percent)  (def: 0)
+;-------------------------------------
+
+;-------------------------------------
+; Main background definition
+[BGdef]
+ ;Filename of sprite data
+spr = MagusCastle.sff
+
+ ;Set to 1 if you want to clear the screen to magenta before
+ ;drawing layer 0 (the default background). Good for spotting "holes"
+ ;in your background.
+ ;Remember to turn this off when you are done debugging the background,
+ ;because it slows down performance.
+debugbg = 0
+
+;----------
+[BG Sky]
+type  = normal
+spriteno = 0, 0
+start = 0, 350
+layerno = 0
+delta = 0,0
+mask = 0
+tile = 0,0
+
+[BG Castle]
+type  = normal
+spriteno = 1, 1
+start = 0, 210
+layerno = 0
+delta = 0.8,0.8
+mask = 1
+tile = 0,0
+
+
+[BG Castle Lights]
+type  = anim
+actionno = 3
+start = 0, 210
+layerno = 0
+delta = 0.8, 0.8
+mask = 1
+tile = 0,0
+
+[BG Walls]
+type  = normal
+spriteno = 1, 0
+start = 0, 220
+layerno = 0
+delta = 1,1
+mask = 1
+tile = 0,0
+
+[BG Flying Bat]
+type  = anim
+actionno = 2
+start = 40, 80
+layerno = 0
+delta = 1,1
+mask = 1
+sin.x = -50, 87, 0
+sin.y = -20, 43, 0
+tile = 0,0
+
+[BG Flying Bat]
+type  = anim
+actionno = 2
+start = -20, 80
+layerno = 0
+delta = 1,1
+mask = 1
+sin.x = -84, 207, 0
+sin.y = -11, 105, 0
+tile = 0,0
+
+[BG Flying Bat]
+type  = anim
+actionno = 2
+start = -40, 80
+layerno = 0
+delta = 1,1
+mask = 1
+sin.x = 50, 64, 60
+sin.y = 20, 36, 30
+tile = 0,0
+
+[BG Flying Bat]
+type  = anim
+actionno = 2
+start = 20, 90
+layerno = 1
+delta = 1,1
+mask = 1
+sin.x = 80, 122, 60
+sin.y = 10, 66, 30
+tile = 0,0
+
+
+[BG Flying Bat]
+type  = anim
+actionno = 2
+start = -25, 70
+layerno = 1
+delta = 1,1
+mask = 1
+sin.x = 75, 100, 60
+sin.y = -25,50, 60
+tile = 0,0
+
+
+[BG Flying Bat]
+type  = anim
+actionno = 2
+start = 0, 100
+layerno = 1
+delta = 1,1
+mask = 1
+sin.x = 80, 120, 60
+sin.y = -20, 60, 60
+tile = 0,0
+
+
+[BG Left Tree 1]
+type  = normal
+spriteno = 2, 0
+start = -220, 240
+layerno = 0
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+
+[BG Left Tree 2]
+type  = normal
+spriteno = 2, 0
+start = -220, 240
+layerno = 1
+trans = add1
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+
+[BG Right Tree 1]
+type  = normal
+spriteno = 2, 1
+start = 220, 240
+layerno = 0
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+
+[BG Right Tree 2]
+type  = normal
+spriteno = 2, 1
+start = 220, 240
+layerno = 1
+trans = add1
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+
+[BG Hanging Bat ]
+type  = anim
+actionno = 1
+start = 112, 140
+layerno = 0
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+[BG Hanging Bat ]
+type  = anim
+actionno = 1
+start = -153, 128
+layerno = 0
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+[BG Hanging Bat ]
+type  = anim
+actionno = 1
+start = 153, 81
+layerno = 0
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+
+
+
+[BG Hanging Bat ]
+type  = anim
+actionno = 1
+start = 112, 140
+layerno = 1
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+[BG Hanging Bat ]
+type  = anim
+actionno = 1
+start = -153, 128
+layerno = 1
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+[BG Hanging Bat ]
+type  = anim
+actionno = 1
+start = 153, 81
+layerno = 1
+delta = 1.2,1.2
+mask = 1
+tile = 0,0
+
+
+
+
+; Hanging Bat
+[Begin Action 1]
+3,0, 0,0, 6, , AS192D128
+3,1, 0,0, 6, , AS192D128
+3,2, 0,0, 6, , AS192D128
+3,1, 0,0, 6, , AS192D128
+
+
+; Flying Bat
+[Begin Action 2]
+3,3, 0,0, 6
+3,4, 0,0, 6
+3,5, 0,0, 6
+3,4, 0,0, 6
+
+
+; Castle Lights
+[Begin Action 3]
+1,2, 0,0, 1, , AS128D256
+1,2, 0,0, 1, , AS64D256
+1,2, 0,0, 2, , AS0D256
+1,2, 0,0, 2, , AS64D256
+

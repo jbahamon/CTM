@@ -1,0 +1,203 @@
+; Frog's constants and state file.
+
+[Data]
+life = 1000
+attack = 100
+defence = 100
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 36
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+
+;Variables with this index and above will not have their values
+;reset to 0 between rounds or matches. There are 60 int variables,
+;indexed from 0 to 59, and 40 float variables, indexed from 0 to 39.
+;If omitted, then it defaults to 60 and 40 for integer and float
+;variables repectively, meaning that none are persistent, i.e. all
+;are reset. If you want your variables to persist between matches,
+;you need to override state 5900 from common1.cns.
+IntPersistIndex = 60
+FloatPersistIndex = 40
+
+[Size]
+xscale = 1         ;Horizontal scaling factor.
+yscale = 1           ;Vertical scaling factor.
+ground.back = 7   ;Player width (back, ground)
+ground.front = 7    ;Player width (front, ground)
+air.back = 10      ;Player width (back, air)
+air.front = 10       ;Player width (front, air)
+height = 14          ;Height of player (for opponent to jump over)
+attack.dist = 160    ;Default attack distance
+proj.attack.dist = 90 ;Default attack distance for projectiles
+proj.doscale = 0     ;Set to 1 to scale projectiles too
+head.pos = -2, -14   ;Approximate position of head
+mid.pos = -2, -7    ;Approximate position of midsection
+shadowoffset = 0     ;Number of pixels to vertically offset the shadow
+draw.offset = 0,0    ;Player drawing offset in pixels (x, y)
+
+[Velocity]
+walk.fwd  = 1.8      ;Walk forward
+walk.back = -1.8     ;Walk backward
+run.fwd  = 3.7, 0    ;Run forward (x, y)
+run.back = -4,-3.8 ;Hop backward (x, y)
+jump.neu = 0,-8    ;Neutral jumping velocity (x, y)
+jump.back = -2.55    ;Jump back Speed (x, y)
+jump.fwd = 2.5       ;Jump forward Speed (x, y)
+runjump.back = -2.55,-8 ;Running jump speeds (opt)
+runjump.fwd = 3.7,-8      ;.
+airjump.neu = 0,-9.1      ;.
+airjump.back = -2.55      ;Air jump speeds (opt)
+airjump.fwd = 2.5         ;.
+
+[Movement]
+airjump.num = 1      ;Number of air jumps allowed (opt)
+airjump.height = 25  ;Minimum distance from ground before you can air jump (opt)
+yaccel = .52         ;Vertical acceleration
+stand.friction = .85  ;Friction coefficient when standing
+crouch.friction = .82 ;Friction coefficient when crouching
+
+[Quotes]
+; Up to 100 victory quotes can be specified per language (victory0 - victory99)
+victory1 = "Mine name is Glenn... Cyrus' hopes and dreams...\nand now the Masamune..."
+victory2 = "Lower thine guard and thou'rt allowing the enemy in."
+victory3 = "Though I am...odd of figure, I am a master swordsman!"
+victory4 = "Thou can'st not run!"
+victory5 = "You fool.\nFrogs haven't belly buttons!"
+victory6 = "Cyrus, I promise to fulfill your wishes!"
+
+;Against Magus
+victory7 = "I rather enjoy this form.\nAnd I oweth it all to you!"
+victory8 = "Cyrus, I hath avenged thee!"
+
+;Against Crono
+victory9 = " Crono, you hath potential to be a good swordsman!"
+
+;Against Lucca
+victory10 = "My guise doth not incur thy trust...\nVery well, do as thee please."
+
+;Against Marle
+victory11 = "Indeed, your resemblance to the Queen is uncanny."
+
+;Against Lavos
+victory12 = "My life retain'eth its meaning...!\nWe haveth our own will!!"
+
+;Against Ayla
+victory13 = "You desire to perish?"
+
+;Against Slash
+victory14  = "It's been ages,\nSir Slush!..."
+
+;Against himself (?)
+victory15  = " Hand'eth over the Masamune!"
+
+;---------------------------------------------------------------------------
+; Variable usage:
+; This is a record of the variables that KFM uses. Keeping a record of your
+; variable usage helps you avoid careless mistakes later.
+; var(0)  - for Intros and win poses:
+;				 0: someone.
+;				 1: Crono
+;				 2: Marle
+;				 3: Lucca
+;				 4: Frog
+;				 5: Robo
+;				 6: Ayla
+;				 7: Magus
+;				 8: Big Magus xD
+;				 9: Slash
+;				 10: Lavos :O
+
+; var(1)  - for button used 
+; var(2)  - Hit > 0
+; var(3)  - Slurp Cut
+; var(4)  - Masa or Mune?
+; var(5)  - Line Slash
+; var(6)  - Time in the wall.
+; var(7)  - snap thing or something like that
+; var(8)  - :P!
+; var(9)  - Masamune
+
+; fvar(39) - Damage Dampener
+
+
+;---------------------------------------------------------------------------
+; Override common states (use same number to override) :
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are always executed (use statedef -2)
+;---------------------------------------------------------------------------
+
+[Statedef -2]
+
+[State -2, Dampener]
+Type=VarSet
+Trigger1=Roundstate<2
+Trigger2=P2Stateno=[120,160]
+Trigger3=enemynear,ctrl
+Trigger4=P2StateType!=A
+Trigger4=P2MoveType!=H
+fvar(39)=1
+ignorehitpause=1
+
+;---------------------------------------------------------------------------
+; States that are executed when in self's state file (use statedef -3)
+;---------------------------------------------------------------------------
+
+[Statedef -3]
+
+[State -3, Prevent Undergound Juggles]
+type= targetbind
+trigger1= movehit=1
+trigger1= numtarget=1 && numenemy
+trigger1= (target,time<=1) && (target,ID=enemynear,ID); this is just to prevent Simul issues as usual
+trigger1= !(target,hitshakeover) && (target, hitfall) && (target, pos y>0)
+pos= ceil(p2dist x), ceil(-pos y); keeps P2 at the same horizontal distance, but resets his Y position
+ignorehitpause= 1
+
+[State -3: AssertSpecial]
+type = AssertSpecial
+trigger1 = (Var(21) > 0)
+flag = NoJuggleCheck
+
+[State -3, Dampener]
+Type = AttackMulSet
+Trigger1 = 1
+value = IfElse(Var(21) > 0, 0.68, fvar(39))
+ignorehitpause = 1
+
+[State -3, Power]
+Type = PowerSet
+Trigger1 = Var(21) > 0
+value = Var(22)
+ignorehitpause = 1
+
+;This controller plays a sound everytime Frog lands from a jump, or
+;from his back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 106 ;Run-back land
+value = S7030, 1
+
+[State -3, RemoveExplod]
+type = RemoveExplod
+trigger1 = StateNo !=1040
+ID = 1040
+
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = AnimElemTime(1) = 1
+trigger1 = stateno = 100 ;Run
+value = S7030, 0
+
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 50 ;Jump 
+trigger1 = (PrevStateNo != [200,1099]) && (PrevStateNo != [3000,3199])
+trigger2 = stateno = 105 ;Run-back
+value = S7030, 0
