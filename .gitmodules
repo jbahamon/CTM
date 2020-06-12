@@ -1,45 +1,24 @@
+[submodule "stages"]
+	path = mugen/stages
+	url = https://github.com/jbahamon/ctm-stages.git
 [submodule "mugen/chars/Ayla"]
 	path = mugen/chars/Ayla
 	url = https://github.com/jbahamon/ctm-ayla.git
 [submodule "mugen/chars/Crono"]
 	path = mugen/chars/Crono
 	url = https://github.com/jbahamon/ctm-crono.git
-[submodule "mugen/chars/Robo"]
-	path = mugen/chars/Robo
-	url = https://github.com/jbahamon/ctm-robo.git
-[submodule "mugen/chars/Marle"]
-	path = mugen/chars/Marle
-	url = https://github.com/jbahamon/ctm-marle.git
 [submodule "mugen/chars/Lucca"]
 	path = mugen/chars/Lucca
 	url = https://github.com/jbahamon/ctm-lucca.git
-[submodule "mugen/chars/Frog"]
-	path = mugen/chars/Frog
-	url = https://github.com/jbahamon/ctm-frog.git
+[submodule "mugen/chars/Marle"]
+	path = mugen/chars/Marle
+	url = https://github.com/jbahamon/ctm-marle.git
 [submodule "mugen/chars/Magus"]
 	path = mugen/chars/Magus
 	url = https://github.com/jbahamon/ctm-magus.git
-[submodule "stages"]
-	path = mugen/stages
-	url = https://github.com/jbahamon/ctm-stages.git
-[submodule "mugen/chars/ctm-ayla"]
-	path = mugen/chars/ctm-ayla
-	url = https://github.com/jbahamon/ctm-ayla.git
-[submodule "mugen/chars/ctm-crono"]
-	path = mugen/chars/ctm-crono
-	url = https://github.com/jbahamon/ctm-crono.git
-[submodule "mugen/chars/ctm-lucca"]
-	path = mugen/chars/ctm-lucca
-	url = https://github.com/jbahamon/ctm-lucca.git
-[submodule "mugen/chars/ctm-marle"]
-	path = mugen/chars/ctm-marle
-	url = https://github.com/jbahamon/ctm-marle.git
-[submodule "mugen/chars/ctm-magus"]
-	path = mugen/chars/ctm-magus
-	url = https://github.com/jbahamon/ctm-magus.git
-[submodule "mugen/chars/ctm-robo"]
-	path = mugen/chars/ctm-robo
+[submodule "mugen/chars/Robo"]
+	path = mugen/chars/Robo
 	url = https://github.com/jbahamon/ctm-robo.git
-[submodule "mugen/chars/ctm-frog"]
-	path = mugen/chars/ctm-frog
+[submodule "mugen/chars/Frog"]
+	path = mugen/chars/Frog
 	url = https://github.com/jbahamon/ctm-frog.git
