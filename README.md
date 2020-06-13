@@ -4,9 +4,9 @@ Ayla or Magus), and face other characters and bosses.
 
 # Characters
 
-### [Crono](http://jbahamon.github.io/ctm-crono/) ![Crono][crono]
+### [Crono](http://jbahamon.github.io/ctm-crono/)
 
-Silent protagonist.
+![Crono][crono] Silent protagonist.
 
 ### [Marle](http://jbahamon.github.io/ctm-marle/)
 
