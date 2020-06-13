@@ -1,11 +1,38 @@
-CTM
-===
+# CTM - Chrono Trigger MUGEN
 
-CTM - Chrono Trigger MUGEN is a fighting game adaptation of Chrono Trigger.
+CTM is a fighting game adaptation of Chrono Trigger.
 You play as one of the game's main characters (Crono, Marle, Lucca, Frog, Robo,
 Ayla or Magus), and face other characters and bosses.
 
-[Characters page](docs/characters.md)
+## Characters
+
+### [Crono](http://jbahamon.github.io/ctm-crono/)
+
+Silent protagonist.
+
+### [Marle](http://jbahamon.github.io/ctm-marle/)
+
+The energetic princess.
+
+### [Lucca](http://jbahamon.github.io/ctm-lucca/)
+
+Childhood friend and mechanical genius.
+
+### [Frog](http://jbahamon.github.io/ctm-frog/)
+
+The chivalrous amphibious knight.
+
+### [Robo](http://jbahamon.github.io/ctm-robo/)
+
+Repaired automaton from a doomed future.
+
+### [Ayla](http://jbahamon.github.io/ctm-ayla/)
+
+Tough leader of the Ioka village.
+
+### [Magus](http://jbahamon.github.io/ctm-magus/)
+
+Fiendlord with a dark past.
 
 ## FAQ
 
