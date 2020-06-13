@@ -5,6 +5,8 @@ CTM - Chrono Trigger MUGEN is a fighting game adaptation of Chrono Trigger.
 You play as one of the game's main characters (Crono, Marle, Lucca, Frog, Robo,
 Ayla or Magus), and face other characters and bosses.
 
+[Characters page](docs/characters.md)
+
 ## FAQ
 
 ### Why isn't there any background music?
