@@ -32,7 +32,13 @@ Tough leader of the Ioka village.
 
 Fiendlord with a dark past.
 
-# The music
+# Installation and Configuration
+
+CTM is based, as the name suggests, on the
+[MUGEN](https://en.wikipedia.org/wiki/M.U.G.E.N) fighting game engine. You just download it and run the `mugen/mugen.exe` file to launch the game.
+
+
+## Music
 
 The code for background music is already there (including appropriate loop points). However, the game's music is not included to avoid blatant copyright issues. 
 
@@ -54,10 +60,6 @@ If you happen to have Chrono Trigger's OST as mp3 files, include the following s
 - Wings That Cross Time.mp3
 - World Revolution.mp3
 
-# Installation and Configuration
-
-CTM is based, as the name suggests, on the
-[MUGEN](https://en.wikipedia.org/wiki/M.U.G.E.N) fighting game engine. You just download it and run the `mugen/mugen.exe` file to launch the game.
 
 # Copyright, licensing, etc.
 
