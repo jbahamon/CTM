@@ -4,7 +4,7 @@ Ayla or Magus), and face other characters and bosses.
 
 # Characters
 
-### [Crono](http://jbahamon.github.io/ctm-crono/)
+### [Crono](http://jbahamon.github.io/ctm-crono/) ![Crono][crono]
 
 Silent protagonist.
 
@@ -71,13 +71,13 @@ Thanks to:
 
 - All of my friends an family, for supporting me all this time.
 
-- The Spriters Resource (http://www.spriters-resource.com) for the sprites. Rips by Tonberry2k, Nemu, Dazz
+- [The Spriters Resource](http://www.spriters-resource.com) for the sprites. Rips by Tonberry2k, Nemu, Dazz
   and many others were incredibly useful.
 
-- The Chrono Compendium (http://chronocompendium.com). In particular, the user Dirtie ripped 
+- [The Chrono Compendium](http://chronocompendium.com). In particular, the user Dirtie ripped 
   a ton of Chrono Trigger sound effect and made them available to everyone.
 
-- The guys at the Mugen Fighters Guild forum (http://mugenguild.com/forumx/index.php),
+- The guys at the [Mugen Fighters Guild Forum](http://mugenguild.com/forumx/index.php),
   for answering my questions and helping me learn. Their Code Library/Snippet Section rocks.
 
 - So many MUGEN creators: PoTS, SMEE, Bia, warusaki3 and everyone who creates stuff that others can use.
@@ -87,3 +87,8 @@ Thanks to:
 - Elecbyte, of course, for creating the awesome fighting game engine that is MUGEN.
 
 - And you...
+
+
+
+
+[crono]: docs/img/crono.gif "Crono"
