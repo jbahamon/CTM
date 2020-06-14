@@ -3,15 +3,19 @@ You play as one of the game's main characters (Crono, Marle, Lucca, Frog, Robo,
 Ayla or Magus), and face other characters and bosses.
 
 ![Title screen](docs/img/screen1.png "Title screen")
+
 The title screen
 
 ![A battle](docs/img/screen2.png "A battle")
+
 Includes characters, stages, lifebars and more.
 
 ![Another battle](docs/img/screen3.png "Another battle")
+
 Each character has their own special and supermoves based on the original game.
 
 ![A third battle](docs/img/screen4.png "A third battle")
+
 Some elements are interpreted to be in a less top-down view.
 
 # Characters
