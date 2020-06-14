@@ -84,8 +84,6 @@ Use my code for whatever you want. Chrono Trigger and all of its characters are 
 
 Thanks to:
 
-- All of my friends an family, for supporting me all this time.
-
 - [The Spriters Resource](http://www.spriters-resource.com) for the sprites. Rips by Tonberry2k, Nemu, Dazz
   and many others were incredibly useful.
 
