@@ -4,33 +4,35 @@ Ayla or Magus), and face other characters and bosses.
 
 # Characters
 
+Each character has its separate project page.
+
 ### [Crono](http://jbahamon.github.io/ctm-crono/)
 
 ![Crono][crono] Silent protagonist.
 
 ### [Marle](http://jbahamon.github.io/ctm-marle/)
 
-The energetic princess.
+![Marle][marle] The energetic princess.
 
 ### [Lucca](http://jbahamon.github.io/ctm-lucca/)
 
-Childhood friend and mechanical genius.
+![Lucca][lucca] Childhood friend and mechanical genius.
 
 ### [Frog](http://jbahamon.github.io/ctm-frog/)
 
-The chivalrous amphibious knight.
+![Frog][frog] The chivalrous amphibious knight.
 
 ### [Robo](http://jbahamon.github.io/ctm-robo/)
 
-Repaired automaton from a doomed future.
+![Robo][robo] Repaired automaton from a doomed future.
 
 ### [Ayla](http://jbahamon.github.io/ctm-ayla/)
 
-Tough leader of the Ioka village.
+![Ayla][ayla] Tough leader of the Ioka village.
 
 ### [Magus](http://jbahamon.github.io/ctm-magus/)
 
-Fiendlord with a dark past.
+![Magus][magus] Fiendlord with a dark past.
 
 # Installation and Configuration
 
@@ -92,3 +94,9 @@ Thanks to:
 
 
 [crono]: docs/img/crono.gif "Crono"
+[marle]: docs/img/marle.gif "Marle"
+[lucca]: docs/img/lucca.gif "Lucca"
+[frog]:  docs/img/frog.gif  "Frog"
+[robo]:  docs/img/robo.gif  "Robo"
+[ayla]:  docs/img/ayla.gif  "Ayla"
+[magus]: docs/img/magus.gif "Magus"
