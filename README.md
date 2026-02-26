@@ -1,6 +1,35 @@
-CTM is a fighting game adaptation of Chrono Trigger.
+# CTM — Chrono Trigger MUGEN
+
+A fan-made 2D fighting game adaptation of Chrono Trigger, built on the MUGEN engine.
 You play as one of the game's main characters (Crono, Marle, Lucca, Frog, Robo,
 Ayla or Magus), and face other characters and bosses.
+
+## About
+
+Chrono Trigger is a 2D JRPG made by what was called a "Dream Team". It's one of my
+favorite games.
+
+I started playing with MUGEN around 2004, and started learning how to create characters. I worked on and off on this roughly from 2007 to 2014, very sporadically. Then I learned git dug up this, and started versioning it properly. Each character has its own repo as a submodule. This is not a MUGEN convention as far as I know, but I wanted to keep things organized.
+
+## Characters
+
+Each character has its separate project page.
+
+-  [![Crono][crono] Crono](http://jbahamon.github.io/ctm-crono/), the silent protagonist.
+
+- [![Marle][marle] Marle](http://jbahamon.github.io/ctm-marle/), the energetic princess.
+
+- [![Lucca][lucca] Lucca](http://jbahamon.github.io/ctm-lucca/), childhood friend and mechanical genius.
+
+- [![Frog][frog] Frog](http://jbahamon.github.io/ctm-frog/), the chivalrous amphibious knight.
+
+- [![Robo][robo] Robo](http://jbahamon.github.io/ctm-robo/), repaired automaton from a doomed future.
+
+- [![Ayla][ayla] Ayla](http://jbahamon.github.io/ctm-ayla/), the tough leader of the Ioka village.
+
+- [![Magus][magus] Magus](http://jbahamon.github.io/ctm-magus/), the Fiendlord with a dark past.
+
+## Screenshots
 
 ![Title screen](docs/img/screen1.png "Title screen")
 
@@ -18,46 +47,12 @@ Each character has their own special and supermoves based on the original game.
 
 Some elements are interpreted to be in a less top-down view.
 
-# Characters
-
-Each character has its separate project page.
-
-### [Crono](http://jbahamon.github.io/ctm-crono/)
-
-![Crono][crono] Silent protagonist.
-
-### [Marle](http://jbahamon.github.io/ctm-marle/)
-
-![Marle][marle] The energetic princess.
-
-### [Lucca](http://jbahamon.github.io/ctm-lucca/)
-
-![Lucca][lucca] Childhood friend and mechanical genius.
-
-### [Frog](http://jbahamon.github.io/ctm-frog/)
-
-![Frog][frog] The chivalrous amphibious knight.
-
-### [Robo](http://jbahamon.github.io/ctm-robo/)
-
-![Robo][robo] Repaired automaton from a doomed future.
-
-### [Ayla](http://jbahamon.github.io/ctm-ayla/)
-
-![Ayla][ayla] Tough leader of the Ioka village.
-
-### [Magus](http://jbahamon.github.io/ctm-magus/)
-
-![Magus][magus] Fiendlord with a dark past.
-
-
-# Installation and Configuration
+## How to play
 
 CTM is based, as the name suggests, on the
-[MUGEN](https://en.wikipedia.org/wiki/M.U.G.E.N) fighting game engine. You just download it and run the `mugen/mugen.exe` file to launch the game.
+[MUGEN](https://en.wikipedia.org/wiki/M.U.G.E.N) fighting game engine, which is included in the repo. You just download the repo and run the `mugen/mugen.exe` file to launch the game.
 
-
-## Music
+### Music
 
 The code for background music is already there (including appropriate loop points). However, the game's music is not included to avoid blatant copyright issues. 
 
@@ -79,13 +74,10 @@ If you happen to have Chrono Trigger's OST as mp3 files, include the following s
 - Wings That Cross Time.mp3
 - World Revolution.mp3
 
+## Credits, Acknowledgments, Legal
 
-# Copyright, licensing, etc.
-
-Use my code for whatever you want. Chrono Trigger and all of its characters are property of Square-Enix. This creation/adaptation was made for entertainment, not for profit. If you want to host this, modify or use it for your own purposes, try to contact me first.
-
-# Credits and Acknowledgments 
-
+Use my code for whatever you want. Chrono Trigger, its setting, and all of its characters are property of Square-Enix. This creation/adaptation was made for entertainment, not for profit. If you want to host this, modify or use it for your own purposes, try to contact me first.
+ 
 Thanks to:
 
 - My friends and family, for supporting me all this time.
@@ -106,8 +98,6 @@ Thanks to:
 - Elecbyte, of course, for creating the awesome fighting game engine that is MUGEN.
 
 - And you...
-
-
 
 
 [crono]: docs/img/crono.gif "Crono"
